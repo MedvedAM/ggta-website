@@ -1,304 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GG Technology Advisory</title>
-
-<style>
-
-:root{
-    --navy:#0B1F3A;
-    --blue:#1C6DD0;
-    --light:#F5F7FA;
-    --dark:#111827;
-    --grey:#6B7280;
-    --white:#FFFFFF;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Segoe UI, Arial, sans-serif;
-    line-height:1.7;
-    color:var(--dark);
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-header{
-    background:var(--white);
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,.05);
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
-}
-
-.logo{
-    font-size:1.4rem;
-    font-weight:700;
-    color:var(--navy);
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
-}
-
-nav a{
-    text-decoration:none;
-    color:var(--dark);
-    font-weight:500;
-}
-
-nav a:hover{
-    color:var(--blue);
-}
-
-.hero{
-    background:linear-gradient(
-    rgba(11,31,58,.92),
-    rgba(11,31,58,.92));
-    color:white;
-}
-
-.hero-content{
-    min-height:80vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:3.5rem;
-    max-width:950px;
-    margin-bottom:25px;
-}
-
-.hero p{
-    max-width:850px;
-    font-size:1.25rem;
-    margin-bottom:40px;
-    opacity:0.95;
-}
-
-.button{
-    background:var(--blue);
-    color:white;
-    text-decoration:none;
-    padding:16px 30px;
-    border-radius:6px;
-    font-weight:600;
-}
-
-.button:hover{
-    opacity:.9;
-}
-
-section{
-    padding:90px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:2.3rem;
-    color:var(--navy);
-}
-
-.section-title p{
-    color:var(--grey);
-}
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 25px rgba(0,0,0,.08);
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:var(--navy);
-}
-
-.why{
-    background:var(--light);
-}
-
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.about-content{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.industries{
-    background:var(--light);
-}
-
-.industry-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.industry-item{
-    background:white;
-    padding:20px;
-    border-radius:8px;
-    text-align:center;
-    box-shadow:0 3px 15px rgba(0,0,0,.05);
-}
-
-.contact{
-    background:var(--navy);
-    color:white;
-    text-align:center;
-}
-
-.contact a{
-    color:#8CC6FF;
-    text-decoration:none;
-}
-
-.contact p{
-    margin-top:15px;
-}
-
-footer{
-    background:#07111E;
-    color:#A0AEC0;
-    text-align:center;
-    padding:25px;
-}
-
-@media(max-width:768px){
-
-nav{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.hero h1{
-    font-size:2.4rem;
-}
-
-.hero p{
-    font-size:1.05rem;
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="container">
-
-<nav>
-    <div class="logo">GG Technology Advisory</div>
-
-    <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#contact" class="button">
-    Start a Conversation
-</a></li>
-    </ul>
-</nav>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="container hero-content">
-
-<h1>
-Technology Leadership.
-Strategic Clarity.
-Measurable Outcomes.
-</h1>
-
-<p>
-Independent technology advisory helping organisations navigate digital transformation,
-smart buildings, cybersecurity, cloud strategy and artificial intelligence.
-</p>
-
-#contact
-Start a Conversation
-</a>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Services</h2>
-<p>Independent advice focused on business outcomes.</p>
-</div>
-
-<div class="services-grid">
-
-<div class="card">
-<h3>Executive Technology Advisory</h3>
-<p>
-Strategic guidance for executives, boards and technology leaders navigating complex decisions and transformation initiatives.
-</p>
-</div>
-
-<div class="card">
-<h3>Technology Strategy</h3>
-<p>
-Roadmaps, governance models, investment planning and operating models aligned to business objectives
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GG Technology Advisory provides independent advisory services across technology strategy, smart buildings, cybersecurity, architecture and artificial intelligence."
+    />
+    <title>GG Technology Advisory</title>
+    <style>
+      :root {
+        --navy: #0b1f3a;
+        --blue: #1c6dd0;
+        --white: #ffffff;
+        --light-grey: #f5f7fa;
+        --dark: #1a1a1a;
+        --muted: #5d6772;
+        --shadow: rgba(11, 31, 58, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        background: var(--white);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1200px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(11, 31, 58, 0.08);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 78px;
+      }
+
+      .brand {
+        color: var(--navy);
+        text-decoration: none;
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links a {
+        position: relative;
+        text-decoration: none;
+        color: var(--dark);
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 0;
+        height: 2px;
+        background: var(--blue);
+        transition: width 0.25s ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--blue);
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a:focus-visible::after {
+        width: 100%;
+      }
+
+      .menu-toggle {
+        display: none;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        margin: 5px 0;
+        border-radius: 3px;
+        background: var(--navy);
+      }
+
+      main section {
+        scroll-margin-top: 90px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, var(--navy) 0%, #112d4b 100%);
+        color: var(--white);
+      }
+
+      .hero-inner {
+        min-height: calc(100vh - 78px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 90px 0 100px;
+      }
+
+      .hero-copy {
+        max-width: 900px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        font-weight: 700;
+      }
+
+      .hero-copy p {
+        max-width: 780px;
+        margin: 1.5rem auto 0;
+        font-size: clamp(1.05rem, 2vw, 1.3rem);
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .btn-primary {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 1rem 2.1rem;
+        background: var(--blue);
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 6px;
+        border: 2px solid var(--blue);
+        transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus-visible {
+        background: transparent;
+        color: var(--blue);
+        transform: translateY(-1px);
+      }
+
+      section {
+        padding: 100px 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.2;
+        letter-spacing: -0.04em;
+      }
+
+      .section-header p {
+        margin: 1rem auto 0;
+        color: var(--muted);
+        max-width: 700px;
+        font-size: 1.08rem;
+      }
+
+      .services {
+        background: var(--white);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.6rem;
+      }
+
+      .service-card {
+        background: var(--light-grey);
+        border-left: 4px solid var(--blue);
+        border-radius: 10px;
+        padding: 2rem 1.7rem;
+        box-shadow: 0 10px 26px rgba(11, 31, 58, 0.03);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .service-card:hover,
+      .service-card:focus-within {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 30px rgba(28, 109, 208, 0.12);
+      }
+
+      .service-card h3 {
+        margin: 0 0 0.8rem;
+        color: var(--navy);
+        font-size: 1.35rem;
+        line-height: 1.3;
+      }
+
+      .service-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.97rem;
+      }
+
+      .about {
+        background: var(--light-grey);
+      }
+
+      .about-inner {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      .about-inner h2 {
+        margin: 0 0 1rem;
+        color: var(--navy);
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        line-height: 1.2;
+        letter-spacing: -0.04em;
+      }
+
+      .about-inner p {
+        margin: 0 0 1.2rem;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .about-highlights {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin-top: 2.5rem;
+      }
+
+      .highlight {
+        background: var(--white);
+        padding: 1.4rem 1.2rem;
+        border-radius: 10px;
+        border-top: 4px solid var(--blue);
+        box-shadow: 0 10px 20px rgba(11, 31, 58, 0.04);
+      }
+
+      .highlight h4 {
+        margin: 0 0 0.5rem;
+        color: var(--navy);
+        font-size: 1.08rem;
+      }
+
+      .highlight p {
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      .industries {
+        background: var(--white);
+      }
+
+      .industries-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.2rem;
+      }
+
+      .industry-item {
+        background: linear-gradient(135deg, var(--navy) 0%, #1b3555 100%);
+        color: var(--white);
+        border-radius: 10px;
+        padding: 2rem 1.2rem;
+        text-align: center;
+        font-weight: 600;
+        box-shadow: 0 14px 26px rgba(11, 31, 58, 0.07);
+        transition: transform 0.25s ease, background 0.25s ease;
+      }
+
+      .industry-item:hover,
+      .industry-item:focus-within {
+        transform: translateY(-6px);
+        background: linear-gradient(135deg, var(--blue) 0%, #124aa6 100%);
+      }
+
+      .contact {
+        background: var(--light-grey);
+      }
+
+      .contact-wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact-wrap h2 {
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        line-height: 1.2;
+        letter-spacing: -0.04em;
+      }
+
+      .contact-card {
+        margin-top: 2.5rem;
+        background: var(--white);
+        border-radius: 12px;
+        padding: 2.4rem 1.8rem;
+        box-shadow: 0 15px 30px rgba(11, 31, 58, 0.05);
+      }
+
+      .contact-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .contact-row + .contact-row {
+        margin-top: 1.8rem;
+      }
+
+      .contact-label {
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--navy);
+        font-weight: 700;
+      }
+
+      .contact-link {
+        color: var(--blue);
+        text-decoration: none;
+        font-size: 1.15rem;
+        font-weight: 600;
+      }
+
+      .contact-link:hover,
+      .contact-link:focus-visible {
+        color: var(--navy);
+      }
+
+      .linkedin-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        margin-top: 2rem;
+        background: var(--blue);
+        color: var(--white);
+        text-decoration: none;
+        border-radius: 50%;
+        font-weight: 700;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      .linkedin-chip:hover,
+      .linkedin-chip:focus-visible {
+        background: var(--navy);
+        transform: translateY(-2px);
+      }
+
+      footer {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.9);
+        padding: 1.6rem 0;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 900px) {
+        .services-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .about-highlights,
+        .industries-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 78px;
+          left: 0;
+          right: 0;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem 20px 1.5rem;
+          background: rgba(255, 255, 255, 0.98);
+          border-bottom: 1px solid rgba(11, 31, 58, 0.08);
+          box-shadow: 0 10px 24px rgba(11, 31, 58, 0.08);
+        }
+
+        .nav-links.is-open {
+          display: flex;
+        }
+
+        .nav-links li {
+          width: 100%;
+        }
+
+        .nav-links a {
+          display: inline-block;
+          width: 100%;
+          padding: 0.5rem 0;
+        }
+
+        .services-grid,
+        .about-highlights,
+        .industries-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-inner {
+          min-height: 70vh;
+          padding-top: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a href="#home" class="brand" aria-label="GG Technology Advisory Home">GG Technology Advisory</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero" aria-label="Home">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Technology Leadership. Strategic Clarity. Measurable Outcomes.</h1>
+            <p>
+              Independent technology advisory helping organisations navigate digital transformation,
+              smart buildings, cybersecurity, cloud strategy and artificial intelligence.
+            </p>
+            <a href="#contact" class="btn-primary">Start a Conversation</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services" aria-label="Services">
+        <div class="container">
+          <div class="section-header">
+            <h2>Services</h2>
+          </div>
+          <div class="services-grid">
+            <article class="service-card">
+              <h3>Executive Technology Advisory</h3>
+              <p>Strategic guidance for organisations navigating growth, transformation and complex technology decisions.</p>
+            </article>
+            <article class="service-card">
+              <h3>Technology Strategy</h3>
+              <p>Roadmaps, governance and digital investment strategies aligned to measurable business outcomes.</p>
+            </article>
+            <article class="service-card">
+              <h3>Smart Buildings &amp; Digital Infrastructure</h3>
+              <p>Technology solutions that enhance operational resilience, building performance and connected environments.</p>
+            </article>
+            <article class="service-card">
+              <h3>Cyber Security &amp; Risk</h3>
+              <p>Risk-informed security strategies designed to protect critical assets, operations and stakeholder trust.</p>
+            </article>
+            <article class="service-card">
+              <h3>Artificial Intelligence</h3>
+              <p>Practical AI strategies that support innovation, efficiency and decision quality across the enterprise.</p>
+            </article>
+            <article class="service-card">
+              <h3>Architecture Assurance</h3>
+              <p>Independent review of technical architecture to improve scalability, interoperability and strategic alignment.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about" aria-label="About">
+        <div class="container about-inner">
+          <h2>About GG Technology Advisory</h2>
+          <p>
+            GG Technology Advisory provides independent advisory services across technology strategy,
+            smart buildings, cybersecurity, architecture and artificial intelligence.
+          </p>
+          <p>
+            We work with organisations seeking clarity, confidence and practical action in a changing digital landscape.
+            Our advice is independent, strategic and grounded in delivering measurable outcomes.
+          </p>
+
+          <div class="about-highlights" aria-label="Key strengths">
+            <div class="highlight">
+              <h4>Independent Thinking</h4>
+              <p>Objective guidance driven by business value and long-term outcomes.</p>
+            </div>
+            <div class="highlight">
+              <h4>Strategic Focus</h4>
+              <p>Technology decisions shaped around organisational priorities and capability.</p>
+            </div>
+            <div class="highlight">
+              <h4>Outcome Measure</h4>
+              <p>Focused execution that translates strategy into tangible results.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="industries" class="industries" aria-label="Industries">
+        <div class="container">
+          <div class="section-header">
+            <h2>Industries</h2>
+          </div>
+          <div class="industries-grid">
+            <div class="industry-item">Property &amp; Real Estate</div>
+            <div class="industry-item">Commercial Buildings</div>
+            <div class="industry-item">Government</div>
+            <div class="industry-item">Healthcare</div>
+            <div class="industry-item">Education</div>
+            <div class="industry-item">Critical Infrastructure</div>
+            <div class="industry-item">Enterprise Technology</div>
+            <div class="industry-item">Digital Transformation</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-label="Contact">
+        <div class="container contact-wrap">
+          <h2>Contact</h2>
+          <div class="contact-card">
+            <div class="contact-row">
+              <span class="contact-label">Email</span>
+              <a class="contact-link" href="mailto:grigori@ggtechadvisory.com.au">grigori@ggtechadvisory.com.au</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label">LinkedIn</span>
+              <a class="contact-link" href="https://www.linkedin.com/company/gg-technology-advisory/" target="_blank" rel="noopener noreferrer">GG Technology Advisory</a>
+            </div>
+          </div>
+          <a
+            class="linkedin-chip"
+            href="https://www.linkedin.com/company/gg-technology-advisory/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit GG Technology Advisory on LinkedIn"
+          >
+            in
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© GG Technology Advisory. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+          const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', String(!expanded));
+          navLinks.classList.toggle('is-open');
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('is-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
