@@ -11,23 +11,24 @@
 
 :root{
     --navy:#0B1F3A;
-    --slate:#324A5F;
+    --blue:#1C6DD0;
     --light:#F5F7FA;
-    --accent:#1D6FD8;
-    --text:#222;
-    --white:#fff;
+    --dark:#111827;
+    --grey:#6B7280;
+    --white:#FFFFFF;
 }
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
     font-family:Segoe UI, Arial, sans-serif;
-    color:var(--text);
     line-height:1.7;
+    color:var(--dark);
 }
 
 .container{
@@ -37,11 +38,11 @@ body{
 }
 
 header{
-    background:var(--navy);
-    color:white;
+    background:var(--white);
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
 }
 
 nav{
@@ -52,27 +53,31 @@ nav{
 }
 
 .logo{
-    font-size:1.3rem;
+    font-size:1.4rem;
     font-weight:700;
-    letter-spacing:1px;
+    color:var(--navy);
 }
 
 nav ul{
-    list-style:none;
     display:flex;
+    list-style:none;
     gap:30px;
 }
 
 nav a{
-    color:white;
     text-decoration:none;
+    color:var(--dark);
+    font-weight:500;
+}
+
+nav a:hover{
+    color:var(--blue);
 }
 
 .hero{
-    background:linear-gradient(rgba(11,31,58,0.9), rgba(11,31,58,0.9)),
-    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');
-    background-size:cover;
-    background-position:center;
+    background:linear-gradient(
+    rgba(11,31,58,.92),
+    rgba(11,31,58,.92));
     color:white;
 }
 
@@ -87,23 +92,28 @@ nav a{
 
 .hero h1{
     font-size:3.5rem;
-    max-width:900px;
-    margin-bottom:20px;
+    max-width:950px;
+    margin-bottom:25px;
 }
 
 .hero p{
-    max-width:800px;
-    font-size:1.2rem;
+    max-width:850px;
+    font-size:1.25rem;
     margin-bottom:40px;
+    opacity:0.95;
 }
 
 .button{
-    background:var(--accent);
+    background:var(--blue);
     color:white;
     text-decoration:none;
-    padding:15px 30px;
+    padding:16px 30px;
     border-radius:6px;
     font-weight:600;
+}
+
+.button:hover{
+    opacity:.9;
 }
 
 section{
@@ -112,31 +122,34 @@ section{
 
 .section-title{
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:60px;
 }
 
 .section-title h2{
+    font-size:2.3rem;
     color:var(--navy);
-    font-size:2.2rem;
-    margin-bottom:10px;
 }
 
-.services{
+.section-title p{
+    color:var(--grey);
+}
+
+.services-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:30px;
 }
 
 .card{
     background:white;
-    border-radius:8px;
     padding:30px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    border-radius:10px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
 }
 
 .card h3{
-    color:var(--navy);
     margin-bottom:15px;
+    color:var(--navy);
 }
 
 .why{
@@ -146,13 +159,31 @@ section{
 .why-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    gap:25px;
 }
 
-.about{
+.about-content{
     max-width:900px;
     margin:auto;
     text-align:center;
+}
+
+.industries{
+    background:var(--light);
+}
+
+.industry-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.industry-item{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
 }
 
 .contact{
@@ -161,27 +192,23 @@ section{
     text-align:center;
 }
 
-.contact h2{
-    margin-bottom:20px;
-}
-
 .contact a{
     color:#8CC6FF;
     text-decoration:none;
 }
 
+.contact p{
+    margin-top:15px;
+}
+
 footer{
     background:#07111E;
-    color:#aaa;
+    color:#A0AEC0;
     text-align:center;
     padding:25px;
 }
 
 @media(max-width:768px){
-
-.hero h1{
-    font-size:2.4rem;
-}
 
 nav{
     flex-direction:column;
@@ -193,6 +220,14 @@ nav ul{
     justify-content:center;
 }
 
+.hero h1{
+    font-size:2.4rem;
+}
+
+.hero p{
+    font-size:1.05rem;
+}
+
 }
 
 </style>
@@ -202,6 +237,7 @@ nav ul{
 <body>
 
 <header>
+
 <div class="container">
 
 <nav>
@@ -210,24 +246,29 @@ nav ul{
 <ul>
 <li>#servicesServices</a></li>
 <li>#aboutAbout</a></li>
-<li>#whyWhy Us</a></li>
+<li>#industriesIndustries</a></li>
 <li>#contactContact</a></li>
 </ul>
 
 </nav>
 
 </div>
+
 </header>
 
 <section class="hero">
 
 <div class="container hero-content">
 
-<h1>Technology Leadership. Strategic Clarity. Measurable Outcomes.</h1>
+<h1>
+Technology Leadership.
+Strategic Clarity.
+Measurable Outcomes.
+</h1>
 
 <p>
-Independent advisory services helping organisations navigate technology strategy,
-smart buildings, cybersecurity, digital transformation and artificial intelligence.
+Independent technology advisory helping organisations navigate digital transformation,
+smart buildings, cybersecurity, cloud strategy and artificial intelligence.
 </p>
 
 #contact
@@ -247,23 +288,16 @@ Start a Conversation
 <p>Independent advice focused on business outcomes.</p>
 </div>
 
-<div class="services">
+<div class="services-grid">
 
 <div class="card">
 <h3>Executive Technology Advisory</h3>
 <p>
-Technology leadership, governance, operating models,
-investment planning and strategic decision support.
+Strategic guidance for executives, boards and technology leaders navigating complex decisions and transformation initiatives.
 </p>
 </div>
 
 <div class="card">
 <h3>Technology Strategy</h3>
 <p>
-Roadmaps, architecture direction and transformation
-initiatives aligned to organisational goals.
-</p>
-</div>
-
-<div class="card">
-<h3>
+Roadmaps, governance models, investment planning and operating models aligned to business objectives
