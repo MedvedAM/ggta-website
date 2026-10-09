@@ -1,640 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="GG Technology Advisory provides independent advisory services across technology strategy, smart buildings, cybersecurity, architecture and artificial intelligence."
-    />
-    <title>GG Technology Advisory</title>
-    <style>
-      :root {
-        --navy: #0b1f3a;
-        --blue: #1c6dd0;
-        --white: #ffffff;
-        --light-grey: #f5f7fa;
-        --dark: #1a1a1a;
-        --muted: #5d6772;
-        --shadow: rgba(11, 31, 58, 0.12);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-        line-height: 1.6;
-        color: var(--dark);
-        background: var(--white);
-      }
-
-      a {
-        color: inherit;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      .container {
-        width: min(1200px, calc(100% - 40px));
-        margin: 0 auto;
-      }
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(255, 255, 255, 0.96);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(11, 31, 58, 0.08);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 78px;
-      }
-
-      .brand {
-        color: var(--navy);
-        text-decoration: none;
-        font-size: clamp(1.1rem, 2vw, 1.5rem);
-        font-weight: 700;
-        letter-spacing: -0.03em;
-      }
-
-      .nav-links {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        margin: 0;
-        padding: 0;
-      }
-
-      .nav-links a {
-        position: relative;
-        text-decoration: none;
-        color: var(--dark);
-        font-size: 0.95rem;
-        font-weight: 500;
-        transition: color 0.2s ease;
-      }
-
-      .nav-links a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -8px;
-        width: 0;
-        height: 2px;
-        background: var(--blue);
-        transition: width 0.25s ease;
-      }
-
-      .nav-links a:hover,
-      .nav-links a:focus-visible {
-        color: var(--blue);
-      }
-
-      .nav-links a:hover::after,
-      .nav-links a:focus-visible::after {
-        width: 100%;
-      }
-
-      .menu-toggle {
-        display: none;
-        background: transparent;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-      }
-
-      .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        margin: 5px 0;
-        border-radius: 3px;
-        background: var(--navy);
-      }
-
-      main section {
-        scroll-margin-top: 90px;
-      }
-
-      .hero {
-        background: linear-gradient(135deg, var(--navy) 0%, #112d4b 100%);
-        color: var(--white);
-      }
-
-      .hero-inner {
-        min-height: calc(100vh - 78px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 90px 0 100px;
-      }
-
-      .hero-copy {
-        max-width: 900px;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        line-height: 1.1;
-        letter-spacing: -0.04em;
-        font-weight: 700;
-      }
-
-      .hero-copy p {
-        max-width: 780px;
-        margin: 1.5rem auto 0;
-        font-size: clamp(1.05rem, 2vw, 1.3rem);
-        line-height: 1.7;
-        color: rgba(255, 255, 255, 0.9);
-      }
-
-      .btn-primary {
-        display: inline-block;
-        margin-top: 2rem;
-        padding: 1rem 2.1rem;
-        background: var(--blue);
-        color: var(--white);
-        text-decoration: none;
-        font-weight: 600;
-        border-radius: 6px;
-        border: 2px solid var(--blue);
-        transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-      }
-
-      .btn-primary:hover,
-      .btn-primary:focus-visible {
-        background: transparent;
-        color: var(--blue);
-        transform: translateY(-1px);
-      }
-
-      section {
-        padding: 100px 0;
-      }
-
-      .section-header {
-        text-align: center;
-        margin-bottom: 3rem;
-      }
-
-      .section-header h2 {
-        margin: 0;
-        color: var(--navy);
-        font-size: clamp(2rem, 4vw, 3rem);
-        line-height: 1.2;
-        letter-spacing: -0.04em;
-      }
-
-      .section-header p {
-        margin: 1rem auto 0;
-        color: var(--muted);
-        max-width: 700px;
-        font-size: 1.08rem;
-      }
-
-      .services {
-        background: var(--white);
-      }
-
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.6rem;
-      }
-
-      .service-card {
-        background: var(--light-grey);
-        border-left: 4px solid var(--blue);
-        border-radius: 10px;
-        padding: 2rem 1.7rem;
-        box-shadow: 0 10px 26px rgba(11, 31, 58, 0.03);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-
-      .service-card:hover,
-      .service-card:focus-within {
-        transform: translateY(-6px);
-        box-shadow: 0 16px 30px rgba(28, 109, 208, 0.12);
-      }
-
-      .service-card h3 {
-        margin: 0 0 0.8rem;
-        color: var(--navy);
-        font-size: 1.35rem;
-        line-height: 1.3;
-      }
-
-      .service-card p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.97rem;
-      }
-
-      .about {
-        background: var(--light-grey);
-      }
-
-      .about-inner {
-        max-width: 980px;
-        margin: 0 auto;
-      }
-
-      .about-inner h2 {
-        margin: 0 0 1rem;
-        color: var(--navy);
-        font-size: clamp(2rem, 4vw, 2.8rem);
-        line-height: 1.2;
-        letter-spacing: -0.04em;
-      }
-
-      .about-inner p {
-        margin: 0 0 1.2rem;
-        color: var(--muted);
-        font-size: 1.08rem;
-      }
-
-      .about-highlights {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.25rem;
-        margin-top: 2.5rem;
-      }
-
-      .highlight {
-        background: var(--white);
-        padding: 1.4rem 1.2rem;
-        border-radius: 10px;
-        border-top: 4px solid var(--blue);
-        box-shadow: 0 10px 20px rgba(11, 31, 58, 0.04);
-      }
-
-      .highlight h4 {
-        margin: 0 0 0.5rem;
-        color: var(--navy);
-        font-size: 1.08rem;
-      }
-
-      .highlight p {
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      .industries {
-        background: var(--white);
-      }
-
-      .industries-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1.2rem;
-      }
-
-      .industry-item {
-        background: linear-gradient(135deg, var(--navy) 0%, #1b3555 100%);
-        color: var(--white);
-        border-radius: 10px;
-        padding: 2rem 1.2rem;
-        text-align: center;
-        font-weight: 600;
-        box-shadow: 0 14px 26px rgba(11, 31, 58, 0.07);
-        transition: transform 0.25s ease, background 0.25s ease;
-      }
-
-      .industry-item:hover,
-      .industry-item:focus-within {
-        transform: translateY(-6px);
-        background: linear-gradient(135deg, var(--blue) 0%, #124aa6 100%);
-      }
-
-      .contact {
-        background: var(--light-grey);
-      }
-
-      .contact-wrap {
-        max-width: 760px;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .contact-wrap h2 {
-        margin: 0;
-        color: var(--navy);
-        font-size: clamp(2rem, 4vw, 2.8rem);
-        line-height: 1.2;
-        letter-spacing: -0.04em;
-      }
-
-      .contact-card {
-        margin-top: 2.5rem;
-        background: var(--white);
-        border-radius: 12px;
-        padding: 2.4rem 1.8rem;
-        box-shadow: 0 15px 30px rgba(11, 31, 58, 0.05);
-      }
-
-      .contact-row {
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-      }
-
-      .contact-row + .contact-row {
-        margin-top: 1.8rem;
-      }
-
-      .contact-label {
-        font-size: 0.78rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--navy);
-        font-weight: 700;
-      }
-
-      .contact-link {
-        color: var(--blue);
-        text-decoration: none;
-        font-size: 1.15rem;
-        font-weight: 600;
-      }
-
-      .contact-link:hover,
-      .contact-link:focus-visible {
-        color: var(--navy);
-      }
-
-      .linkedin-chip {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        margin-top: 2rem;
-        background: var(--blue);
-        color: var(--white);
-        text-decoration: none;
-        border-radius: 50%;
-        font-weight: 700;
-        transition: background 0.2s ease, transform 0.2s ease;
-      }
-
-      .linkedin-chip:hover,
-      .linkedin-chip:focus-visible {
-        background: var(--navy);
-        transform: translateY(-2px);
-      }
-
-      footer {
-        background: var(--navy);
-        color: rgba(255, 255, 255, 0.9);
-        padding: 1.6rem 0;
-        text-align: center;
-      }
-
-      footer p {
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      @media (max-width: 900px) {
-        .services-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG Technology Advisory | Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B1F3A',
+                        accentBlue: '#1C6DD0',
+                        lightGrey: '#F5F7FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
         }
+    </script>
+</head>
+<body class="bg-lightGrey text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-        .about-highlights,
-        .industries-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded bg-navy flex items-center justify-center text-white font-bold text-lg tracking-wider">GG</div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-navy text-base lg:text-lg tracking-tight leading-tight">GG Technology Advisory</span>
+                    <span class="text-[10px] text-slate-500 uppercase tracking-widest font-semibold">Strategic Technology Leadership</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="text-accentBlue font-semibold transition-colors">Home</a>
+                <a href="services.html" class="hover:text-accentBlue transition-colors">Services</a>
+                <a href="about.html" class="hover:text-accentBlue transition-colors">About</a>
+                <a href="insights.html" class="hover:text-accentBlue transition-colors">Insights</a>
+                <a href="contact.html" class="hover:text-accentBlue transition-colors">Contact</a>
+            </div>
 
-      @media (max-width: 768px) {
-        .menu-toggle {
-          display: block;
-        }
+            <!-- CTA Button -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="contact.html" class="px-5 py-2.5 bg-navy text-white text-sm font-medium rounded hover:bg-navy/90 transition-all shadow-sm">
+                    Start a Conversation
+                </a>
+            </div>
 
-        .nav-links {
-          position: absolute;
-          top: 78px;
-          left: 0;
-          right: 0;
-          display: none;
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 1rem 20px 1.5rem;
-          background: rgba(255, 255, 255, 0.98);
-          border-bottom: 1px solid rgba(11, 31, 58, 0.08);
-          box-shadow: 0 10px 24px rgba(11, 31, 58, 0.08);
-        }
+            <!-- Mobile Menu Toggle -->
+            <div class="lg:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-navy p-2 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
 
-        .nav-links.is-open {
-          display: flex;
-        }
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-accentBlue font-semibold py-1">Home</a>
+            <a href="services.html" class="block text-slate-600 hover:text-accentBlue py-1">Services</a>
+            <a href="about.html" class="block text-slate-600 hover:text-accentBlue py-1">About</a>
+            <a href="insights.html" class="block text-slate-600 hover:text-accentBlue py-1">Insights</a>
+            <a href="contact.html" class="block text-slate-600 hover:text-accentBlue py-1">Contact</a>
+            <div class="pt-2">
+                <a href="contact.html" class="block text-center w-full py-2.5 bg-navy text-white text-sm font-medium rounded">Start a Conversation</a>
+            </div>
+        </div>
+    </nav>
 
-        .nav-links li {
-          width: 100%;
-        }
-
-        .nav-links a {
-          display: inline-block;
-          width: 100%;
-          padding: 0.5rem 0;
-        }
-
-        .services-grid,
-        .about-highlights,
-        .industries-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-inner {
-          min-height: 70vh;
-          padding-top: 70px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="container nav">
-        <a href="#home" class="brand" aria-label="GG Technology Advisory Home">GG Technology Advisory</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links" id="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+    <header class="bg-navy text-white py-24 lg:py-36 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="max-w-3xl space-y-8">
+                <span class="inline-block px-3 py-1 bg-accentBlue/20 text-accentBlue border border-accentBlue/30 text-xs font-semibold uppercase tracking-widest rounded">
+                    Independent Executive Advisory
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                    Technology Leadership. Strategic Clarity. Measurable Outcomes.
+                </h1>
+                <p class="text-lg lg:text-xl text-slate-300 font-light leading-relaxed">
+                    Independent technology advisory helping organisations navigate digital transformation, smart buildings, cybersecurity, cloud strategy and artificial intelligence.
+                </p>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                    <a href="contact.html" class="px-8 py-4 bg-accentBlue text-white font-medium rounded hover:bg-blue-600 transition-all text-center shadow-md">
+                        Start a Conversation
+                    </a>
+                    <a href="services.html" class="px-8 py-4 bg-transparent border border-slate-600 text-white font-medium rounded hover:border-white transition-all text-center">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-      <section id="home" class="hero" aria-label="Home">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <h1>Technology Leadership. Strategic Clarity. Measurable Outcomes.</h1>
-            <p>
-              Independent technology advisory helping organisations navigate digital transformation,
-              smart buildings, cybersecurity, cloud strategy and artificial intelligence.
-            </p>
-            <a href="#contact" class="btn-primary">Start a Conversation</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="services" aria-label="Services">
-        <div class="container">
-          <div class="section-header">
-            <h2>Services</h2>
-          </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <h3>Executive Technology Advisory</h3>
-              <p>Strategic guidance for organisations navigating growth, transformation and complex technology decisions.</p>
-            </article>
-            <article class="service-card">
-              <h3>Technology Strategy</h3>
-              <p>Roadmaps, governance and digital investment strategies aligned to measurable business outcomes.</p>
-            </article>
-            <article class="service-card">
-              <h3>Smart Buildings &amp; Digital Infrastructure</h3>
-              <p>Technology solutions that enhance operational resilience, building performance and connected environments.</p>
-            </article>
-            <article class="service-card">
-              <h3>Cyber Security &amp; Risk</h3>
-              <p>Risk-informed security strategies designed to protect critical assets, operations and stakeholder trust.</p>
-            </article>
-            <article class="service-card">
-              <h3>Artificial Intelligence</h3>
-              <p>Practical AI strategies that support innovation, efficiency and decision quality across the enterprise.</p>
-            </article>
-            <article class="service-card">
-              <h3>Architecture Assurance</h3>
-              <p>Independent review of technical architecture to improve scalability, interoperability and strategic alignment.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="about" aria-label="About">
-        <div class="container about-inner">
-          <h2>About GG Technology Advisory</h2>
-          <p>
-            GG Technology Advisory provides independent advisory services across technology strategy,
-            smart buildings, cybersecurity, architecture and artificial intelligence.
-          </p>
-          <p>
-            We work with organisations seeking clarity, confidence and practical action in a changing digital landscape.
-            Our advice is independent, strategic and grounded in delivering measurable outcomes.
-          </p>
-
-          <div class="about-highlights" aria-label="Key strengths">
-            <div class="highlight">
-              <h4>Independent Thinking</h4>
-              <p>Objective guidance driven by business value and long-term outcomes.</p>
+    <section class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-lightGrey rounded flex items-center justify-center text-accentBlue text-xl font-bold">
+                        <i class="fa-solid fa-chess"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy">Independent Counsel</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Unbiased vendor-agnostic technology advice focused solely on client value and long-term enterprise resilience.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-lightGrey rounded flex items-center justify-center text-accentBlue text-xl font-bold">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy">Risk & Assurance</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Rigorous architecture assurance and cybersecurity governance to safeguard critical infrastructure and assets.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-lightGrey rounded flex items-center justify-center text-accentBlue text-xl font-bold">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy">Measurable Value</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Transforming complex digital transformations into structured execution plans with predictable commercial outcomes.
+                    </p>
+                </div>
             </div>
-            <div class="highlight">
-              <h4>Strategic Focus</h4>
-              <p>Technology decisions shaped around organisational priorities and capability.</p>
-            </div>
-            <div class="highlight">
-              <h4>Outcome Measure</h4>
-              <p>Focused execution that translates strategy into tangible results.</p>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section id="industries" class="industries" aria-label="Industries">
-        <div class="container">
-          <div class="section-header">
-            <h2>Industries</h2>
-          </div>
-          <div class="industries-grid">
-            <div class="industry-item">Property &amp; Real Estate</div>
-            <div class="industry-item">Commercial Buildings</div>
-            <div class="industry-item">Government</div>
-            <div class="industry-item">Healthcare</div>
-            <div class="industry-item">Education</div>
-            <div class="industry-item">Critical Infrastructure</div>
-            <div class="industry-item">Enterprise Technology</div>
-            <div class="industry-item">Digital Transformation</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact" aria-label="Contact">
-        <div class="container contact-wrap">
-          <h2>Contact</h2>
-          <div class="contact-card">
-            <div class="contact-row">
-              <span class="contact-label">Email</span>
-              <a class="contact-link" href="mailto:grigori@ggtechadvisory.com.au">grigori@ggtechadvisory.com.au</a>
+    <footer class="bg-navy text-slate-400 py-16 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4 md:col-span-2">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded bg-accentBlue flex items-center justify-center text-white font-bold text-sm">GG</div>
+                    <span class="font-bold text-white text-lg">GG Technology Advisory</span>
+                </div>
+                <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
+                    Providing independent advisory services across technology strategy, smart buildings, cybersecurity, architecture and artificial intelligence.
+                </p>
             </div>
-            <div class="contact-row">
-              <span class="contact-label">LinkedIn</span>
-              <a class="contact-link" href="https://www.linkedin.com/company/gg-technology-advisory/" target="_blank" rel="noopener noreferrer">GG Technology Advisory</a>
+            <div class="space-y-3">
+                <h4 class="text-white text-sm font-semibold tracking-wider uppercase">Navigation</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="insights.html" class="hover:text-white transition-colors">Insights</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                </ul>
             </div>
-          </div>
-          <a
-            class="linkedin-chip"
-            href="https://www.linkedin.com/company/gg-technology-advisory/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit GG Technology Advisory on LinkedIn"
-          >
-            in
-          </a>
+            <div class="space-y-3">
+                <h4 class="text-white text-sm font-semibold tracking-wider uppercase">Connect</h4>
+                <p class="text-sm">Email: <a href="mailto:grigori@ggtechadvisory.com.au" class="text-accentBlue hover:underline">grigori@ggtechadvisory.com.au</a></p>
+                <p class="text-sm"><a href="https://www.linkedin.com/company/gg-technology-advisory/" target="_blank" class="text-accentBlue hover:underline flex items-center space-x-1.5"><i class="fa-brands fa-linkedin text-base"></i><span>LinkedIn Profile</span></a></p>
+            </div>
         </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <p>© GG Technology Advisory. All Rights Reserved.</p>
-      </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center">
+            <p>&copy; GG Technology Advisory. All Rights Reserved.</p>
+            <p class="mt-4 sm:mt-0">Strategic Technology Leadership & Advisory</p>
+        </div>
     </footer>
 
     <script>
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-
-      if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-          const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-          menuToggle.setAttribute('aria-expanded', String(!expanded));
-          navLinks.classList.toggle('is-open');
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
         });
-
-        navLinks.querySelectorAll('a').forEach((link) => {
-          link.addEventListener('click', () => {
-            navLinks.classList.remove('is-open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-          });
-        });
-      }
     </script>
-  </body>
+</body>
 </html>
