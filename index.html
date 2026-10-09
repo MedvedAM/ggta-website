@@ -1,79 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>GG Technology Advisory</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px;
-            color: #222;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        h1 {
-            color: #0B1F3A;
-        }
+<title>GG Technology Advisory</title>
 
-        .hero {
-            text-align: center;
-            padding: 60px 0;
-        }
+<style>
 
-        .button {
-            background: #0B1F3A;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+:root{
+    --navy:#0B1F3A;
+    --slate:#324A5F;
+    --light:#F5F7FA;
+    --accent:#1D6FD8;
+    --text:#222;
+    --white:#fff;
+}
 
-        section {
-            margin-top: 60px;
-        }
-    </style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    background:var(--navy);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    background:linear-gradient(rgba(11,31,58,0.9), rgba(11,31,58,0.9)),
+    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    max-width:900px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:800px;
+    font-size:1.2rem;
+    margin-bottom:40px;
+}
+
+.button{
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:6px;
+    font-weight:600;
+}
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:var(--navy);
+    font-size:2.2rem;
+    margin-bottom:10px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:8px;
+    padding:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:var(--navy);
+    margin-bottom:15px;
+}
+
+.why{
+    background:var(--light);
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact{
+    background:var(--navy);
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact a{
+    color:#8CC6FF;
+    text-decoration:none;
+}
+
+footer{
+    background:#07111E;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.4rem;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>GG Technology Advisory</h1>
+<header>
+<div class="container">
 
-    <p>
-        Independent technology strategy, smart buildings,
-        cyber security and AI advisory services.
-    </p>
+<nav>
+<div class="logo">GG Technology Advisory</div>
 
-    grigori@ggtechadvisory.com.au
-        Contact Us
-    </a>
+<ul>
+<li>#servicesServices</a></li>
+<li>#aboutAbout</a></li>
+<li>#whyWhy Us</a></li>
+<li>#contactContact</a></li>
+</ul>
+
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>Technology Leadership. Strategic Clarity. Measurable Outcomes.</h1>
+
+<p>
+Independent advisory services helping organisations navigate technology strategy,
+smart buildings, cybersecurity, digital transformation and artificial intelligence.
+</p>
+
+#contact
+Start a Conversation
+</a>
+
 </div>
 
-<section>
-    <h2>Services</h2>
-
-    <ul>
-        <li>Technology Strategy</li>
-        <li>CIO Advisory</li>
-        <li>Smart Buildings & OT</li>
-        <li>Cyber Security Reviews</li>
-        <li>AI Readiness & Governance</li>
-        <li>Solution Architecture Reviews</li>
-    </ul>
 </section>
 
-<section>
-    <h2>About</h2>
+<section id="services">
 
-    <p>
-        GG Technology Advisory helps organisations align
-        technology investments with business outcomes through
-        practical, independent and executive-level advice.
-    </p>
-</section>
+<div class="container">
 
-</body>
-</html>
+<div class="section-title">
+<h2>Services</h2>
+<p>Independent advice focused on business outcomes.</p>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>Executive Technology Advisory</h3>
+<p>
+Technology leadership, governance, operating models,
+investment planning and strategic decision support.
+</p>
+</div>
+
+<div class="card">
+<h3>Technology Strategy</h3>
+<p>
+Roadmaps, architecture direction and transformation
+initiatives aligned to organisational goals.
+</p>
+</div>
+
+<div class="card">
+<h3>
