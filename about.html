@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GG Technology Advisory | About Us</title>
-    <meta name="description" content="About GG Technology Advisory and founder Grigori Medved, a trusted technology advisor with 25+ years of enterprise architecture experience and TOGAF 9.2 and Microsoft Cloud Architect credentials.">
+    <meta name="description" content="About GG Technology Advisory and founder Grigori Grigoryan, a trusted technology advisor with 25+ years of enterprise architecture experience, TOGAF 9.2 and Microsoft Cloud Architect certifications.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
@@ -28,6 +28,24 @@
             }
         }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Grigori Grigoryan",
+      "jobTitle": "Founder & Principal Advisor",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "GG Technology Advisory",
+        "url": "https://ggtechadvisory.com.au"
+      },
+      "email": "mailto:grigori@ggtechadvisory.com.au",
+      "sameAs": [
+        "https://www.linkedin.com/in/grigorimedved/",
+        "https://www.linkedin.com/company/gg-technology-advisory/"
+      ]
+    }
+    </script>
 </head>
 <body class="bg-lightGrey text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
@@ -48,166 +66,3 @@
                 <a href="insights.html" class="hover:text-accentBlue transition-colors">Insights</a>
                 <a href="contact.html" class="hover:text-accentBlue transition-colors">Contact</a>
             </div>
-
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="contact.html" class="px-5 py-2.5 bg-navy text-white text-sm font-medium rounded hover:bg-navy/90 transition-all shadow-sm">
-                    Start a Conversation
-                </a>
-            </div>
-
-            <div class="lg:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-navy p-2 focus:outline-none" aria-label="Toggle Menu">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
-            <a href="index.html" class="block text-slate-600 hover:text-accentBlue py-1">Home</a>
-            <a href="services.html" class="block text-slate-600 hover:text-accentBlue py-1">Services</a>
-            <a href="about.html" class="block text-accentBlue font-semibold py-1">About</a>
-            <a href="insights.html" class="block text-slate-600 hover:text-accentBlue py-1">Insights</a>
-            <a href="contact.html" class="block text-slate-600 hover:text-accentBlue py-1">Contact</a>
-            <div class="pt-2">
-                <a href="contact.html" class="block text-center w-full py-2.5 bg-navy text-white text-sm font-medium rounded">Start a Conversation</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="bg-navy text-white py-20 lg:py-28">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <span class="inline-block px-3 py-1 bg-accentBlue/20 text-accentBlue border border-accentBlue/30 text-xs font-semibold uppercase tracking-widest rounded mb-4">
-                Firm Profile
-            </span>
-            <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight">About GG Technology Advisory</h1>
-            <p class="mt-4 text-slate-300 text-lg max-w-2xl font-light">
-                Independent, rigorous, and outcome-focused technology strategy and advisory for complex enterprises.
-            </p>
-        </div>
-    </header>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6">
-                    <h2 class="text-3xl font-bold text-navy">Independent Counsel for Critical Technology Decisions</h2>
-                    <p class="text-slate-700 leading-relaxed text-base lg:text-lg font-light">
-                        GG Technology Advisory provides independent advisory services across technology strategy, smart buildings, cybersecurity, architecture and artificial intelligence.
-                    </p>
-                    <p class="text-slate-600 leading-relaxed">
-                        We help organisations make informed technology decisions, reduce delivery risk and maximise the value of technology investments through practical, independent and outcome-focused advisory.
-                    </p>
-                    <div class="pt-4">
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-navy text-white font-medium rounded hover:bg-navy/90 transition-all text-sm">
-                            <span>Get in Touch</span>
-                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-5 bg-lightGrey p-8 rounded-xl border border-slate-200 space-y-6">
-                    <h3 class="text-xl font-bold text-navy border-b border-slate-300 pb-4">Our Core Pillars</h3>
-                    <ul class="space-y-4 text-sm text-slate-700">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-circle-check text-accentBlue mt-1 mr-3"></i>
-                            <span><strong>Vendor Independence:</strong> Zero commercial affiliations with software or hardware vendors.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-circle-check text-accentBlue mt-1 mr-3"></i>
-                            <span><strong>Executive Rigor:</strong> Board-level clarity and strategic alignment for complex transformations.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-circle-check text-accentBlue mt-1 mr-3"></i>
-                            <span><strong>Risk Mitigation:</strong> Proactive architecture assurance safeguarding enterprise value.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="founder" class="py-20 bg-lightGrey border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-5 flex justify-center lg:justify-start">
-                    <div class="w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden bg-white border border-slate-200 shadow-sm">
-                        <img src="https://via.placeholder.com/600x600.png?text=Headshot" alt="Professional headshot placeholder of Grigori Medved" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="lg:col-span-7 space-y-5">
-                    <h2 class="text-3xl font-bold text-navy">Meet the Founder</h2>
-                    <h3 class="text-xl font-semibold text-navy">Grigori Medved — Founder & Principal Advisor</h3>
-                    <p class="text-slate-700 leading-relaxed">
-                        With 25+ years of enterprise architecture experience, Grigori helps organisations translate complex technology decisions into strategic, practical action. He combines deep architecture leadership with governance discipline and executive clarity to guide digital transformation, cloud strategy, architecture assurance and cybersecurity initiatives across critical and enterprise environments.
-                    </p>
-                    <div class="flex flex-wrap gap-3 pt-2">
-                        <span class="px-3 py-1.5 border border-slate-300 rounded bg-white text-sm font-medium text-navy">25+ years enterprise architecture</span>
-                        <span class="px-3 py-1.5 border border-slate-300 rounded bg-white text-sm font-medium text-navy">TOGAF 9.2 certification</span>
-                        <span class="px-3 py-1.5 border border-slate-300 rounded bg-white text-sm font-medium text-navy">Microsoft Cloud Architect certifications</span>
-                    </div>
-                    <div class="pt-4">
-                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-navy text-white font-medium rounded hover:bg-navy/90 transition-all text-sm">
-                            Contact the Founder
-                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Grigori Medved",
-      "jobTitle": "Founder & Principal Advisor",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "GG Technology Advisory"
-      },
-      "description": "Enterprise architect with 25+ years of experience. TOGAF 9.2 certified and Microsoft Cloud Architect certified. Specialises in cloud strategy, architecture assurance, cybersecurity and smart buildings.",
-      "email": "grigori@ggtechadvisory.com.au",
-      "url": "https://ggtechadvisory.com.au/about.html"
-    }
-    </script>
-
-    <footer class="bg-navy text-slate-400 py-16 mt-auto border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-            <div class="space-y-4 md:col-span-2">
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 rounded bg-accentBlue flex items-center justify-center text-white font-bold text-sm">GG</div>
-                    <span class="font-bold text-white text-lg">GG Technology Advisory</span>
-                </div>
-                <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
-                    Providing independent advisory services across technology strategy, smart buildings, cybersecurity, architecture and artificial intelligence.
-                </p>
-            </div>
-            <div class="space-y-3">
-                <h4 class="text-white text-sm font-semibold tracking-wider uppercase">Navigation</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
-                    <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
-                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="insights.html" class="hover:text-white transition-colors">Insights</a></li>
-                    <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                </ul>
-            </div>
-            <div class="space-y-3">
-                <h4 class="text-white text-sm font-semibold tracking-wider uppercase">Connect</h4>
-                <p class="text-sm">Email: <a href="mailto:grigori@ggtechadvisory.com.au" class="text-accentBlue hover:underline">grigori@ggtechadvisory.com.au</a></p>
-                <p class="text-sm"><a href="https://www.linkedin.com/company/gg-technology-advisory/" target="_blank" class="text-accentBlue hover:underline flex items-center space-x-1.5"><i class="fa-brands fa-linkedin"></i><span class="ml-1">LinkedIn</span></a></p>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center">
-            <p>&copy; GG Technology Advisory. All Rights Reserved.</p>
-            <p class="mt-4 sm:mt-0">Strategic Technology Leadership & Advisory</p>
-        </div>
-    </footer>
-
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-    </script>
-</body>
-</html>
