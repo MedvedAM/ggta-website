@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond Compliance: Building True Enterprise Cyber Resilience | GG Technology Advisory</title>
+  <meta name="description" content="A practical view on moving beyond compliance toward resilient enterprise cyber governance, technology controls and operational risk management.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Beyond Compliance: Building True Enterprise Cyber Resilience",
+    "author": { "@type": "Person", "name": "Grigori Medved" },
+    "datePublished": "2026-08-01",
+    "publisher": { "@type": "Organization", "name": "GG Technology Advisory" }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-lightGrey text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded bg-navy flex items-center justify-center text-white font-bold text-lg tracking-wider">GG</div>
+        <div class="flex flex-col">
+          <span class="font-bold text-navy text-base lg:text-lg tracking-tight leading-tight">GG Technology Advisory</span>
+          <span class="text-[10px] text-slate-500 uppercase tracking-widest font-semibold">Strategic Technology Leadership</span>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="/index.html" class="hover:text-accentBlue transition-colors">Home</a>
+        <a href="/services.html" class="hover:text-accentBlue transition-colors">Services</a>
+        <a href="/about.html" class="hover:text-accentBlue transition-colors">About</a>
+        <a href="/insights.html" class="text-accentBlue font-semibold transition-colors">Insights</a>
+        <a href="/contact.html" class="hover:text-accentBlue transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 lg:px-12 py-12">
+    <article>
+      <header class="mb-10">
+        <span class="text-xs font-semibold uppercase tracking-wider text-accentBlue">Cybersecurity</span>
+        <h1 class="mt-3 text-4xl font-bold text-navy">Beyond Compliance: Building True Enterprise Cyber Resilience</h1>
+        <div class="mt-4 text-sm text-slate-500 flex flex-wrap items-center gap-3">
+          <span>By Grigori Medved</span>
+          <span>•</span>
+          <time datetime="2026-08-01">August 1, 2026</time>
+          <span>•</span>
+          <span class="reading-time">7 min read</span>
+        </div>
+      </header>
+
+      <div class="article-body prose prose-lg max-w-none text-slate-700">
+        <p>Compliance is necessary, but it is not sufficient. Cybersecurity is no longer assessed simply by whether an organisation ticks boxes. The real test is whether it can respond, recover and continue operating when risk materialises.</p>
+
+        <h2>Compliance is a baseline, not a strategy</h2>
+        <p>Many organisations build their risk posture around frameworks and control checklists. That can contribute to visibility and assurance, but it often leaves critical gaps on resilience, third-party exposure and architecture complexity. The result is a false sense of confidence.</p>
+
+        <h2>Risk needs to be treated as an operating model</h2>
+        <p>Enterprise cyber resilience depends on clear ownership across architecture, identity, operations and incident response. Security controls must align to how the organisation actually works, not how it is documented on paper.</p>
+
+        <h2>Third-party and supply chain exposure</h2>
+        <p>One of the most significant vulnerabilities is not always the internal environment; it is the network of external dependencies that support delivery. That is why risk reviews need to include vendor dependence, data flows and digital trust boundaries.</p>
+
+        <p>Resilience is built through disciplined architecture, practical response planning and an executive mindset that views cyber risk as a business continuity challenge.</p>
+      </div>
+
+      <footer class="mt-10 border-t border-slate-200 pt-8">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-full bg-navy text-white flex items-center justify-center font-bold">GM</div>
+          <div>
+            <h4 class="font-semibold text-navy">Grigori Medved</h4>
+            <p class="text-sm text-slate-600">Founder & Principal Advisor. Enterprise architecture, cloud strategy, smart buildings and cybersecurity.</p>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    function readingTime(text) {
+      const words = (text || '').trim().split(/\s+/).filter(Boolean).length;
+      return Math.max(1, Math.round(words / 200)) + ' min read';
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const body = document.querySelector('.article-body');
+      const target = document.querySelector('.reading-time');
+      if (body && target) {
+        target.textContent = readingTime(body.innerText || body.textContent);
+      }
+    });
+  </script>
+</body>
+</html>
