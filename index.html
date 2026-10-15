@@ -28,6 +28,22 @@
             }
         }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GG Technology Advisory",
+      "url": "https://ggtechadvisory.com.au",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ABN",
+        "value": "88 188 362 270"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/gg-technology-advisory/"
+      ]
+    }
+    </script>
 </head>
 <body class="bg-lightGrey text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
@@ -49,3 +65,168 @@
                 <a href="insights.html" class="hover:text-accentBlue transition-colors">Insights</a>
                 <a href="contact.html" class="hover:text-accentBlue transition-colors">Contact</a>
             </div>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="contact.html" class="px-5 py-2.5 bg-navy text-white text-sm font-medium rounded hover:bg-navy/90 transition-all shadow-sm">
+                    Start a Conversation
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="lg:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-navy p-2 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-accentBlue font-semibold py-1">Home</a>
+            <a href="services.html" class="block text-slate-600 hover:text-accentBlue py-1">Services</a>
+            <a href="about.html" class="block text-slate-600 hover:text-accentBlue py-1">About</a>
+            <a href="insights.html" class="block text-slate-600 hover:text-accentBlue py-1">Insights</a>
+            <a href="contact.html" class="block text-slate-600 hover:text-accentBlue py-1">Contact</a>
+            <div class="pt-2">
+                <a href="contact.html" class="block text-center w-full py-2.5 bg-navy text-white text-sm font-medium rounded">Start a Conversation</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-navy text-white py-24 lg:py-36 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="max-w-3xl space-y-8">
+                <span class="inline-block px-3 py-1 bg-accentBlue/20 text-accentBlue border border-accentBlue/30 text-xs font-semibold uppercase tracking-widest rounded">
+                    Independent Executive Advisory
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                    Technology Leadership. Strategic Clarity. Measurable Outcomes.
+                </h1>
+                <p class="text-lg lg:text-xl text-slate-300 font-light leading-relaxed">
+                    Independent technology advisory helping organisations navigate digital transformation, smart buildings, cybersecurity, cloud strategy and artificial intelligence.
+                </p>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                    <a href="contact.html" class="px-8 py-4 bg-accentBlue text-white font-medium rounded hover:bg-blue-600 transition-all text-center shadow-md">
+                        Start a Conversation
+                    </a>
+                    <a href="services.html" class="px-8 py-4 bg-transparent border border-slate-600 text-white font-medium rounded hover:border-white transition-all text-center">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-lightGrey rounded flex items-center justify-center text-accentBlue text-xl font-bold">
+                        <i class="fa-solid fa-chess"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy">Independent Counsel</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Unbiased vendor-agnostic technology advice focused solely on client value and long-term enterprise resilience.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-lightGrey rounded flex items-center justify-center text-accentBlue text-xl font-bold">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy">Risk & Assurance</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Rigorous architecture assurance and cybersecurity governance to safeguard critical infrastructure and assets.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-lightGrey rounded flex items-center justify-center text-accentBlue text-xl font-bold">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy">Measurable Value</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Transforming complex digital transformations into structured execution plans with predictable commercial outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founder" class="py-20 bg-lightGrey border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-4 flex justify-center lg:justify-start">
+                    <div class="w-56 h-56 rounded-full overflow-hidden bg-white border border-slate-200 shadow-sm">
+                        <img src="images/founder-grigori.jpg" alt="Headshot of Grigori Grigoryan, Founder and Principal Advisor" width="600" height="600" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-8 space-y-5">
+                    <span class="inline-block px-3 py-1 bg-accentBlue/10 text-accentBlue border border-accentBlue/20 text-xs font-semibold uppercase tracking-widest rounded">
+                        Meet the Founder
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-navy">Grigori Grigoryan</h2>
+                    <p class="text-sm uppercase tracking-[0.2em] text-slate-500 font-semibold">Founder & Principal Advisor</p>
+                    <p class="text-slate-700 leading-relaxed text-base lg:text-lg">
+                        With 25+ years of enterprise architecture experience, Grigori helps organisations translate complex technology decisions into strategic, practical action. He combines deep technical knowledge with executive-level delivery experience to drive measurable outcomes for clients across industries.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <span class="px-3 py-1.5 border border-slate-300 rounded bg-white text-sm font-medium text-navy">25+ years enterprise architecture</span>
+                        <span class="px-3 py-1.5 border border-slate-300 rounded bg-white text-sm font-medium text-navy">TOGAF 9.2 certified</span>
+                        <span class="px-3 py-1.5 border border-slate-300 rounded bg-white text-sm font-medium text-navy">Microsoft Cloud Architect</span>
+                    </div>
+                    <div class="pt-2">
+                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-navy text-white font-medium rounded hover:bg-navy/90 transition-all text-sm">
+                            <span>Book a Consultation</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy text-slate-400 py-16 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4 md:col-span-2">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded bg-accentBlue flex items-center justify-center text-white font-bold text-sm">GG</div>
+                    <span class="font-bold text-white text-lg">GG Technology Advisory</span>
+                </div>
+                <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
+                    Providing independent advisory services across technology strategy, smart buildings, cybersecurity, architecture and artificial intelligence.
+                </p>
+                <p class="text-xs text-slate-500 mt-2">ABN: 88 188 362 270</p>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-white text-sm font-semibold tracking-wider uppercase">Navigation</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="insights.html" class="hover:text-white transition-colors">Insights</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-white text-sm font-semibold tracking-wider uppercase">Connect</h4>
+                <p class="text-sm">Email: <a href="mailto:grigori@ggtechadvisory.com.au" class="text-accentBlue hover:underline">grigori@ggtechadvisory.com.au</a></p>
+                <p class="text-sm"><a href="https://www.linkedin.com/company/gg-technology-advisory/" target="_blank" class="text-accentBlue hover:underline flex items-center space-x-1.5"><i class="fa-brands fa-linkedin"></i><span class="ml-2">LinkedIn</span></a></p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center">
+            <p>&copy; GG Technology Advisory. All Rights Reserved.</p>
+            <p class="mt-4 sm:mt-0">Strategic Technology Leadership & Advisory</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
