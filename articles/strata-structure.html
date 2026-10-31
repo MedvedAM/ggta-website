@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Where Do Strata Levies Actually Go? | GG Technology Advisory</title>
-    <meta name="description" content="A practical explanation of how strata levies work in NSW, including administrative and capital works funding and the role of owners corporations.">
+    <title>Owners Corporation vs Strata Committee vs Building Management | GG Technology Advisory</title>
+    <meta name="description" content="A practical explanation of how governance and responsibility are distributed across owners corporations, strata committees, strata managers and building management in NSW.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -45,11 +45,24 @@
             </header>
 
             <div class="article-body space-y-6 text-slate-700 leading-relaxed">
-                <img src="/articles/strata-structure.jpg" alt="Infographic explaining how NSW strata levies work" class="w-full rounded-xl border border-slate-200 bg-white shadow-sm">
+                <img src="/articles/strata-structure.jpg" alt="Infographic explaining the governance structure of NSW strata communities" class="w-full rounded-xl border border-slate-200 bg-white shadow-sm">
 
-                <p> Strata living can often feel complex, and one of the biggest friction points in any community is confusion over who actually holds the responsibility and authority. 
-Whether it’s distinguishing between what the Owners Corporation decides versus what the Strata Committee or Strata Manager handles, clarity is key to a well run building. 
-To help demystify the ecosystem, I put together this infographic mapping out the relationships between lot owners, governance bodies, management, and service providers under the NSW framework.  Well managed strata isn't just about buildings, it's about people, places, and long term value. </p>
+                <p>Strata living can often feel complex, and one of the biggest friction points in any community is confusion over who actually holds responsibility and authority. Whether it is distinguishing between what the Owners Corporation decides versus what the Strata Committee or Strata Manager handles, clarity is key to a well-run building.</p>
+                <p>To help demystify the ecosystem, I put together this infographic mapping out the relationships between lot owners, governance bodies, management and service providers under the NSW framework.</p>
+
+                <div class="mt-10 rounded-xl border border-slate-200 bg-slate-50 p-6">
+                    <h2 class="text-2xl font-bold text-navy">A simple way to think about it</h2>
+                    <ul class="mt-4 list-disc pl-6 space-y-2">
+                        <li><strong>Owners Corporation:</strong> the legal entity that owns and manages the strata scheme on behalf of all lot owners.</li>
+                        <li><strong>Strata Committee:</strong> the elected body that oversees key operational and governance decisions between general meetings.</li>
+                        <li><strong>Strata Manager:</strong> the professional administrator who supports compliance, meetings, documentation and day-to-day processes.</li>
+                        <li><strong>Building management / service providers:</strong> contractors and specialists delivering maintenance, security, cleaning, lifts, security systems and technical services.</li>
+                    </ul>
+                </div>
+
+                <p>It is common for people to assume the Strata Committee directly performs all the work. In practice, the committee sets priorities and delegates much of the operational execution to managers, contractors and specialist advisors.</p>
+                <p>That distinction matters because governance failures often arise when owners confuse authority with delivery. Accountability sits with the body that has the decision-making power; execution often sits elsewhere.</p>
+                <p>When the governance model is clear, owners are better placed to engage constructively, understand where decisions are made and plan for the building's long-term health.</p>
             </div>
 
             <footer class="mt-12 border-t border-slate-200 pt-8">
@@ -69,7 +82,6 @@ To help demystify the ecosystem, I put together this infographic mapping out the
             const words = (text || '').trim().split(/\s+/).filter(Boolean).length;
             return Math.max(1, Math.round(words / 200)) + ' min read';
         }
-
         document.addEventListener('DOMContentLoaded', function () {
             const body = document.querySelector('.article-body');
             const target = document.querySelector('.reading-time');
