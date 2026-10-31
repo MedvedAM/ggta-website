@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where Do Strata Levies Actually Go? | GG Technology Advisory</title>
+    <meta name="description" content="A practical explanation of how strata levies work in NSW, including administrative and capital works funding and the role of owners corporations.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-lightGrey text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="/index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded bg-navy flex items-center justify-center text-white font-bold text-lg tracking-wider">GG</div>
+                <div class="flex items-center flex-col">
+                    <span class="font-bold text-navy text-base lg:text-lg tracking-tight leading-tight">GG Technology Advisory</span>
+                    <span class="text-[10px] text-slate-500 uppercase tracking-widest font-semibold">Strategic Technology Leadership</span>
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="/index.html" class="hover:text-accentBlue transition-colors">Home</a>
+                <a href="/services.html" class="hover:text-accentBlue transition-colors">Services</a>
+                <a href="/about.html" class="hover:text-accentBlue transition-colors">About</a>
+                <a href="/insights.html" class="text-accentBlue font-semibold transition-colors">Insights</a>
+                <a href="/contact.html" class="hover:text-accentBlue transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
 
+    <main class="max-w-4xl mx-auto px-6 lg:px-12 py-12">
+        <article>
+            <header class="mb-10">
+                <span class="text-xs font-semibold uppercase tracking-wider text-accentBlue">Strata Journey</span>
+                <h1 class="mt-3 text-4xl lg:text-5xl font-bold text-navy leading-tight"> Strata Journey Part 1: Five Years of Transformation </h1>
+                <div class="mt-4 text-sm text-slate-500 flex flex-wrap items-center gap-3">
+                    <span>By GG Technology Advisory</span>
+                    <span>•</span>
+                    <time datetime="2026-10-14">October 14, 2026</time>
+                    <span>•</span>
+                    <span class="reading-time">5 min read</span>
+                </div>
+            </header>
+
+            <div class="article-body space-y-6 text-slate-700 leading-relaxed">
+                <img src="/articles/part1.jpg" alt="Infographic explaining how NSW strata levies work" class="w-full rounded-xl border border-slate-200 bg-white shadow-sm">
+
+                <p> When I first took on the role of Chairman of our strata committee, I quickly realised that managing a residential building is not unlike running a small business. The building had a rich history, a diverse group of residents, and a growing list of challenges that had accumulated over time. While there was no single crisis demanding immediate attention, there was a clear need for a strategic approach to ensure the property's long-term financial and physical sustainability.
+
+Looking back now, five years later, the scale of the transformation is remarkable. What began as a review of finances evolved into a comprehensive programme of improvement that touched almost every aspect of the building's operations, maintenance, technology and long-term planning.
+One of the first lessons I learned was that meaningful change starts with understanding the numbers.
+
+Too often, building committees focus on the most recent budget or the latest invoice without stepping back to identify broader trends. My first task was to gather several years of financial reports and undertake a detailed analysis of expenditure patterns. By reviewing historical spending across all categories, it became possible to identify where money was being consumed, which costs were increasing, and which areas offered opportunities for optimisation.
+
+This exercise revealed far more than individual line items. It provided insight into the overall health of the building and highlighted opportunities to improve efficiency, strengthen financial controls and reduce unnecessary expenditure.
+
+From this analysis, we developed a structured roadmap of financial improvements:
+
+    Short-term initiatives focused on addressing obvious inefficiencies, improving contractor management, and eliminating avoidable costs.
+    Medium-term initiatives concentrated on upgrading systems, improving operational processes, and delivering measurable reductions in ongoing expenditure.
+    Long-term initiatives were designed to position the building for future sustainability, minimise lifecycle costs, and ensure that major projects could be delivered without placing unexpected financial pressure on owners.
+
+However, reviewing finances alone is not enough.
+
+A building's financial position can only be properly understood when considered alongside its physical condition. A healthy bank balance today may simply be disguising significant liabilities that have not yet surfaced.
+
+For this reason, one of the next priorities was to conduct a comprehensive inspection of the building and assess its major assets and infrastructure. Plant rooms, pumps, electrical systems, fire safety equipment, lifts, common property assets and building fabric all required review.
+
+The objective was straightforward: identify risks before they became failures.
+
+Coming next: From Reactive to Proactive. How risk mitigation, asset planning and early intervention changed the building's operating model and significantly reduced the frequency of costly surprises.</p>
+            </div>
+
+            <footer class="mt-12 border-t border-slate-200 pt-8">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold text-navy">GG Technology Advisory</p>
+                        <p class="text-sm text-slate-600">Independent strategic technology guidance for building owners, committees and communities.</p>
+                    </div>
+                    <a href="/insights.html" class="inline-flex items-center px-4 py-2 bg-navy text-white text-sm font-medium rounded hover:bg-navy/90 transition-all">Back to Insights <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <script>
+        function readingTime(text) {
+            const words = (text || '').trim().split(/\s+/).filter(Boolean).length;
+            return Math.max(1, Math.round(words / 200)) + ' min read';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const body = document.querySelector('.article-body');
+            const target = document.querySelector('.reading-time');
+            if (body && target) {
+                target.textContent = readingTime(body.innerText || body.textContent);
+            }
+        });
+    </script>
+</body>
+</html>
